@@ -562,6 +562,15 @@
         </p>
 
         <div class="rating-section">
+          <!-- Rating Scale Legend -->
+          <div
+            style="display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; margin-bottom: 1rem; font-size: 0.6875rem; color: var(--slate-400);">
+            <span><strong>5</strong> — Excellent</span>
+            <span><strong>4</strong> — Very Satisfied</span>
+            <span><strong>3</strong> — Satisfied</span>
+            <span><strong>2</strong> — Fair</span>
+            <span><strong>1</strong> — Poor</span>
+          </div>
           <table class="rating-table" id="ratingTable">
             <thead>
               <tr>
@@ -641,16 +650,12 @@
             </tbody>
           </table>
           <div class="rating-error" id="ratingError">Please rate all evaluation criteria before submitting.</div>
+        </div>
 
-          <!-- Rating Scale Legend -->
-          <div
-            style="display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; margin-top: 0.75rem; font-size: 0.6875rem; color: var(--slate-400);">
-            <span><strong>5</strong> — Excellent</span>
-            <span><strong>4</strong> — Very Satisfied</span>
-            <span><strong>3</strong> — Satisfied</span>
-            <span><strong>2</strong> — Fair</span>
-            <span><strong>1</strong> — Poor</span>
-          </div>
+        <!-- Comments / Suggestions Section -->
+        <div class="mb-3 mt-4">
+          <label for="commentRecommendation" class="form-label">Comments / Suggestions</label>
+          <textarea class="form-control" id="commentRecommendation" name="commentRecommendation" rows="3" placeholder="Enter your comments, recommendations, or suggestions here..."></textarea>
         </div>
 
         <!-- Agreement Checkbox -->

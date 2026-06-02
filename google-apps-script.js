@@ -48,9 +48,10 @@ function doPost(e) {
         "Methods and procedure of the activity (orderliness and sequencing of the activity).",
         "Venue (facilities, equipment, multimedia etc.).",
         "Effectiveness of the activity.",
-        "General rating of the activity conducted."
+        "General rating of the activity conducted.",
+        "Comments / Recommendations"
       ]);
-      const headerRange = sheet.getRange(1, 1, 1, 11);
+      const headerRange = sheet.getRange(1, 1, 1, 12);
       headerRange.setFontWeight("bold");
       headerRange.setBackground("#f1f5f9");
       headerRange.setFontColor("#0f172a");
@@ -102,7 +103,8 @@ function doPost(e) {
       data.q5_methods || "",
       data.q6_venue || "",
       data.q7_effectiveness || "",
-      data.q8_general || ""
+      data.q8_general || "",
+      data.commentRecommendation || ""
     ]);
 
     // Flush changes to disk before releasing the lock

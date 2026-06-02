@@ -122,6 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
       q6_venue: getRadioValue('q6_venue'),
       q7_effectiveness: getRadioValue('q7_effectiveness'),
       q8_general: getRadioValue('q8_general'),
+      commentRecommendation: document.getElementById('commentRecommendation').value.trim(),
     };
 
     try {
