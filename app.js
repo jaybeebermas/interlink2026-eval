@@ -19,6 +19,28 @@ document.addEventListener("DOMContentLoaded", () => {
   const errorMessage = document.getElementById('errorMessage');
   const ratingError = document.getElementById('ratingError');
 
+  // ── Check Registration Deadline on Load ──
+  const deadline = 1780502340000; // June 3, 2026, 11:59 PM UTC+8
+  if (Date.now() >= deadline) {
+    // Disable submit button
+    submitBtn.disabled = true;
+    submitBtnText.textContent = "Registration Closed";
+
+    // Display the closed overlay message
+    errorMessage.textContent = "This form is no longer accepting responses.";
+    const overlayTitle = overlayError.querySelector('.result-overlay__title');
+    if (overlayTitle) {
+      overlayTitle.textContent = "Registration Closed";
+    }
+    overlayError.classList.add('active');
+
+    // Hide the "Try Again" button since registration is closed permanently
+    const tryAgainBtn = overlayError.querySelector('button');
+    if (tryAgainBtn) {
+      tryAgainBtn.style.display = 'none';
+    }
+  }
+
   // All rating question field names (must match radio button name attributes)
   const RATING_FIELDS = [
     'q1_registration',

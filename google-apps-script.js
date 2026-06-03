@@ -23,6 +23,12 @@ const SHEET_NAME = "Evaluation";
  * Entry point: Handles POST requests from the evaluation form.
  */
 function doPost(e) {
+  // Check if form is still accepting responses (Deadline: June 3, 2026, 11:59 PM UTC+8)
+  const deadline = 1780502340000; // Unix timestamp for 2026-06-03T23:59:00+08:00
+  if (new Date().getTime() >= deadline) {
+    return createJsonResponse(false, "This form is no longer accepting responses. Registration closed on June 3, 2026, at 11:59 PM.");
+  }
+
   const lock = LockService.getScriptLock();
   try {
     lock.waitLock(30000);
