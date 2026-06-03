@@ -9,6 +9,7 @@ const ENDPOINT_URL = "https://script.google.com/macros/s/AKfycbwv0OaA8ZHi0GgFX-G
 document.addEventListener("DOMContentLoaded", () => {
   'use strict';
 
+
   // ── DOM References ──
   const form = document.getElementById('evaluationForm');
   const submitBtn = document.getElementById('submitBtn');
